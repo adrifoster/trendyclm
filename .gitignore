@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+*.nc
+*.log
+*.out
+*.err
+.DS_Store
+__pycache__/
