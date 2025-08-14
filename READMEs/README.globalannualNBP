@@ -1,0 +1,2 @@
+Global NBP (Pg) is calculated by multiplying NBP (kg/m2) by land area (m2), which is 
+calculated as (1.0 - oceanCoverFrac)*gridArea, then multiplying by the conversion factor 1e-12.

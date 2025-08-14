@@ -1,0 +1,10 @@
+These variables are not applicable to CLM and so are not supplied
+
+albedopft - we do not output 'blue sky albedo', we have instead supplied both black sky and white sky albedo
+cSoilpft - soil carbon is not output at the PFT level, as PFTs share a soil column
+fGrazing - CLM does not have grazing
+fVegSoil - this is not output by CLM
+mslpft - soil moisture is not output at the PFT level, as PFTs share a soil column
+nbppft - NBP is not calculated at the PFT level
+rhpft - RH is not calculated at the PFT level
+snow_depthpft - snow depth is not output at the PFT level, as PFTs share a soil column

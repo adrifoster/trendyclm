@@ -1,0 +1,17 @@
+name: trendy-ctsm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy>=1.20
+  - pandas=2.3.1
+  - xarray=2025.7.1
+  - netCDF4>=1.5
+  - scipy=1.16.0
+  - matplotlib=3.10.3
+  - tqdm>=4.62
+  - jupyterlab>=3.0
+  - dask=2025.7.0
+  - dask-jobqueue=0.9.0
+  - xesmf=0.8.10
+  - scikit-learn=1.7.1

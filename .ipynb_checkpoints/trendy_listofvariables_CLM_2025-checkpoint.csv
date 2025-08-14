@@ -1,0 +1,84 @@
+CLM_run,CLM_varname,output_varname,long_name,CMOR_dims,priority,NA_val,frequency,output_function,CLM_units,conversion_factor,global_cf,dimension,units
+1,FSRND-FSRVD-FSDSND-FSDSVD,black_sky_albedopft,Vegtype level Broadband Albedo,longitude latitude PFT time,1,-99999,monthly,black_sky_albedo,fraction,1,1,pft,fraction
+1,FAREA_BURNED,burntArea,Burnt Area Fraction,longitude latitude time,1,-99999,monthly,sum,/s,1,,global,fraction
+1,CWD_C,cCwd,Carbon in Coarse Woody Debris,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2 
+1,LEAFC-LEAFC_STORAGE-LEAFC_XFER,cLeaf,Carbon in Leaves,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2 
+1,TOTLITC,cLitter,Carbon in Above-ground Litter Pool,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2
+1,TOT_WOODPRODC,cProduct,Carbon in Products of Land Use Change,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2
+1,DEADCROOTC-FROOTC-LIVECROOTC-FROOTC_STORAGE-FROOTC_XFER-LIVECROOTC_STORAGE-LIVECROOTC_XFER-DEADCROOTC_STORAGE-DEADCROOTC_XFER,cRoot,Carbon in Roots,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2
+1,TOTLITC-TOTSOMC,cSoil,Carbon in Soil (including below-ground litter),longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2
+0,NA,cSoilpft,Vegtype level Carbon in Soil ,longitude latitude PFT time,2,-99999,annual,NA,NA,NA,NA,NA,kg m-2 
+1,SOM_ACT_C-SOM_SLO_C-SOM_PAS_C,cSoilpools,Carbon in individual soil pools,longitude latitude Pool time,1,-99999,annual,carbon_pool,gC/m2,0.001,1.00E-15,carbon_pool,kg m-2
+1,SOM_ACT_C_1m-SOM_SLO_C_1m-SOM_PAS_C_1m,cSoilpools_1m,Carbon in individual soil pools  (up to 1 meter),longitude latitude Pool time,1,-99999,annual,carbon_pool,gC/m2,0.001,1.00E-15,carbon_pool,kg m-2
+1,TOTVEGC,cVeg,Carbon in Vegetation,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2
+1,TOTVEGC,cVegpft,Vegtype level Carbon in Vegetation,longitude latitude PFT time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,pft,kg m-2
+1,WOODC,cWood,Carbon in Wood,longitude latitude time,1,-99999,annual,sum,gC/m2,0.001,1.00E-15,global,kg m-2 
+1,TLAI,dlai,Leaf Area Index Daily,longitude latitude time,2,-99999,daily,sum,m2/m2,1,1.00E+00,global,
+1,FGEV,evapo,Vegtype level Soil evaporation,longitude latitude PFT time,1,-99999,monthly,sum,W/m2,1,1,pft,W m-2 
+1,QVEGT-QVEGE-QSOIL,evapotrans,Total Evapo-Transpiration,longitude latitude time,1,-99999,monthly,sum,mm/s,1,31536000,global,kg m-2 s-1
+1,FCTR-FGEV,evapotranspft,Vegtype level evapotranspiration ,longitude latitude PFT time,1,-99999,monthly,sum,W/m2,1,1,pft,W m-2 
+1,QSOIL,evspsblsoi,Water Evaporation from Soil,longitude latitude time,2,-99999,monthly,sum,mm/s,1,31536000,global,kg m-2 s-1
+1,QVEGE,evspsblveg,Evaporation from Canopy,longitude latitude time,2,-99999,monthly,sum,mm/s,1,31536000,global,kg m-2 s-1
+1,LEAFC_ALLOC,fAllocLeaf,Vegtype NPP allocation to leaves,longitude latitude pft time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,pft,kg m-2 s-1
+1,FROOTC_ALLOC,fAllocRoot,Vegtype NPP allocation to Root,longitude latitude pft time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,pft,kg m-2 s-1
+1,WOODC_ALLOC,fAllocWood,Vegtype NPP allocation to Wood,longitude latitude pft time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,pft,kg m-2 s-1
+1,NFIX-FFIX_TO_SMINN,fBNF,Biological N fixation,longitude latitude time,2,-99999,monthly,sum,gN/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,COL_FIRE_CLOSS-SOMC_FIRE,fFire,CO2 Emission from Fire,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,SOMFIRE,fFireCsoil,CO2 Emission from Csoil due to Fire,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,M_DEADROOTC_STORAGE_TO_FIRE-M_DEADROOTC_TO_FIRE-M_DEADROOTC_XFER_TO_FIRE-M_DEADSTEMC_STORAGE_TO_FIRE-M_DEADSTEMC_TO_FIRE-M_DEADSTEMC_XFER_TO_FIRE-M_FROOTC_STORAGE_TO_FIRE-M_FROOTC_TO_FIRE-M_FROOTC_XFER_TO_FIRE-M_LEAFC_STORAGE_TO_FIRE-M_LEAFC_TO_FIRE-M_LEAFC_XFER_TO_FIRE-M_LIVEROOTC_STORAGE_TO_FIRE-M_LIVEROOTC_TO_FIRE-M_LIVEROOTC_XFER_TO_FIRE-M_LIVESTEMC_STORAGE_TO_FIRE-M_LIVESTEMC_TO_FIRE-M_LIVESTEMC_XFER_TO_FIRE-M_GRESP_STORAGE_TO_FIRE-M_GRESP_XFER_TO_FIRE,fFireCveg,CO2 Emission from Cveg due to Fire,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,LITFIRE,fFireLitter,CO2 Emission from Litter due to Fire,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+0,NA,fGrazing,CO2 Flux to Atmosphere from Grazing,longitude latitude time,2,-99999,monthly,NA,NA,NA,NA,NA,NA
+1,CROPPROD1C_LOSS,fHarvest,CO2 Flux to Atmosphere from Crop Harvesting,longitude latitude time,2,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,LEAFC_TO_LITTER,fLeafLitter,Carbon Flux from Leaves to Litter ,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,LIT_CEL_C_TO_SOM_ACT_C-LIT_LIG_C_TO_SOM_SLO_C-LIT_MET_C_TO_SOM_ACT_C,fLitterSoil,Total Carbon Flux from Litter to Soil,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,DWT_CONV_CFLUX-TOT_WOODPRODC_LOSS,fLuc,CO2 Flux to Atmosphere from Land Use Change,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,F_N2O_DENIT-F_N2O_NIT,fN2O,N2O flux,longitude latitude time,2,-99999,monthly,sum,gN/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,NDEP_TO_SMINN,fNdep,Nitrogen deposition,longitude latitude time,2,-99999,monthly,sum,gN/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,SMIN_NO3_LEACHED-SMIN_NO3_RUNOFF-DENIT,fNloss,total ecosystem nitrogen loss,longitude latitude time,2,-99999,monthly,sum,gN/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,NET_NMIN,fNnetmin,net Nitrogen mineralisation,longitude latitude time,2,-99999,monthly,sum,gN/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,SMINN_TO_PLANT,fNup,Nitrogen uptake of Vegetation,longitude latitude time,2,-99999,monthly,sum,gN/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,FROOTC_TO_LITTER,fRootLitter,Carbon Flux from Roots to Litter ,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,LITFALL,fVegLitter,Total Carbon Flux from Vegetation to Litter,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+0,NA,fVegSoil,Total Carbon Flux from Vegetation Directly to Soil,longitude latitude time,1,-99999,monthly,NA,NA,NA,NA,NA,NA
+1,CWD_C_TO_LIT_CEL_C-CWD_C_TO_LIT_LIG_C,fWoodLitter,Carbon Flux from Wood to Litter ,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,GPP,gpp,Gross Primary Production,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,GPP,gpppft,Vegtype level GPP,longitude latitude PFT time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,pft,kg m-2 s-1
+1,QIRRIG_DRIP,irripft,Vegtype level irrigation,longitude latitude PFT time,2,-99999,monthly,sum,mm/s,1,31536000,pft,kg m-2 s-1
+1,TLAI,lai,Leaf Area Index,longitude latitude time,1,-99999,monthly,sum,m2/m2,1,1,global,
+1,TLAI,laipft,Vegtype level Leaf Area Index,longitude latitude PFT time,1,-99999,monthly,sum,m2/m2,1,1,pft,
+1,pfts1d_wtgcell,landCoverFrac,Fractional Land Cover of PFT,longitude latitude PFT time,1,-99999,annual,sum,,1,1,pft,
+1,QRUNOFF,mrro,Total Runoff,longitude latitude time,1,-99999,monthly,sum,mm/s,1,31536000,global,kg m-2 s-1
+1,TOTSOILLIQ-TOTSOILICE,mrso,Total Soil Moisture Content,longitude latitude time,1,-99999,monthly,sum,kg/m2,1,1,global,kg m-2
+1,SOILICE-SOILLIQ,msl,Moisture of Soil,longitude latitude smlayer time,2,-99999,monthly,sum,kg/m2,1,1,soil_layer,kg m-2
+0,NA,mslpft,Vegtype level soil moisture ,longitude latitude PFT time,2,-99999,monthly,NA,NA,NA,NA,NA,NA
+1,NBP,nbp,Net Biospheric Production,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+0,NA,nbppft,Vegtype level NBP,longitude latitude PFT time,1,-99999,monthly,NA,NA,NA,NA,NA,NA
+1,SMINN,nInorgSoil,Nitrogen Inorganic (NH4+ and NO3-) in Soil (including below-ground litter),longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,LEAFN-LEAFN_XFER-LEAFN_STORAGE,nLeaf,Nitrogen in Leaves,longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2 
+1,TOTLITN,nLitter,Nitrogen in Above-ground Litter Pool,longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,TOTLITN-TOTSOMN,nOrgSoil,Nitrogen Organic  in Soil (including below-ground litter),longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,NPP,npp,Net Primary Production,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,NPP,npppft,Vegtype level NPP,longitude latitude PFT time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,pft,kg m-2 s-1
+1,TOT_WOODPRODN,nProduct,Nitrogen in Products of Land Use Change,longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,FROOTN,nRoot,Nitrogen in Roots,longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,TOTLITN-TOTSOMN-SMINN,nSoil,Nitrogen in Soil (including below-ground litter),longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,TOTVEGN,nVeg,Nitrogen in Vegetation,longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2
+1,DEADCROOTN-DEADSTEMN-LIVECROOTN-LIVESTEMN,nWood,Nitrogen in Wood,longitude latitude time,2,-99999,annual,sum,gN/m2,0.001,1.00E-15,global,kg m-2 
+1,landfrac,oceanCoverFrac,Fractional Ocean Cover,longitude latitude time,1,-99999,once,sum,fraction,1,,global,
+1,SNOW-RAIN,pr,Precipitation,longitude latitude time,1,-99999,monthly,sum,mm/s,1,31536000,global,kg m-2 s-1
+1,AR,ra,Autotrophic (Plant) Respiration,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,HR,rh,Heterotrophic Respiration,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,HR,rhpft,Vegtype level Rh,longitude latitude PFT time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,pft,kg m-2 s-1
+1,SOM_ACT_C_TO_SOM_PAS_C-SOM_ACT_C_TO_SOM_SLO_C-SOM_SLO_C_TO_SOM_ACT_C-SOM_SLO_C_TO_SOM_PAS_C-SOM_PAS_C_TO_SOM_ACT_C,rhpool,Carbon Flux from individual soil pools,longitude latitude pool time,1,-99999,monthly,rh_pool,gC/m2/s,0.001,3.15E-08,carbon_pool,kg m-2 s-1
+1,FLDS-FIRE-FSDS-FSR,rnpft,Vegtype level net radiation,longitude latitude PFT time,1,-99999,monthly,rn,W/m2,1,1,pft,W m-2
+1,FSDS,rsds,Surface Downwelling Shortwave Radiation,longitude latitude time,1,-99999,monthly,sum,W/m2,1,1,global,W m-2
+1,FSH,shflxpft,Vegtype level sensible heat flux,longitude latitude PFT time,1,-99999,monthly,sum,W/m2,1,1,pft,W m-2
+0,NA,snow_depthpft,Vegtype level snow depth or snow water equivalent ,longitude latitude PFT time,1,-99999,monthly,NA,NA,NA,NA,NA,NA
+1,RR-HR,soilr,Soil Respiration,longitude latitude time,1,-99999,monthly,sum,gC/m2/s,0.001,3.15E-08,global,kg m-2 s-1
+1,TSA,tas,Near-Surface Air Temperature,longitude latitude time,1,-99999,monthly,sum,K,1,1,global,K
+1,HTOP,theightpft,Vegtype level tree heights,longitude latitude PFT time,2,-99999,annual,sum,m,1,1,pft,m
+1,QVEGT,tran,Transpiration,longitude latitude time,2,-99999,monthly,sum,mm/s,1,31536000,global,kg m-2 s-1
+1,FCTR,transpft,Vegtype level transpiration ,longitude latitude PFT time,1,-99999,monthly,sum,W/m2,1,1,pft,W m-2
+1,TV,tskinpft,Vegtype level Skin temperature,longitude latitude PFT time,2,-99999,monthly,sum,K,1,1,pft,K
+1,TSOI,tsl,Temperature of Soil,longitude latitude stlayer time,2,-99999,monthly,sum,K,1,1,soil_layer,K
+1,FSRNI-FSRVI-FSDSNI-FSDSVI,white_sky_albedopft,Vegtype level Broadband Albedo,longitude latitude PFT time,1,-99999,monthly,white_sky_albedo,fraction,1,1,pft,

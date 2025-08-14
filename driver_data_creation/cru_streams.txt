@@ -1,0 +1,7 @@
+dlwrf
+pres
+spfh
+tmp
+tmin
+tmax
+ugrd

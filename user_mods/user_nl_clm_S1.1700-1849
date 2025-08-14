@@ -1,0 +1,110 @@
+!----------------------------------------------------------------------------------
+! Users should add all user specific namelist changes below in the form of 
+! namelist_var = new_namelist_value 
+!
+! EXCEPTIONS: 
+! Set use_cndv           by the compset you use and the CLM_BLDNML_OPTS -dynamic_vegetation setting
+! Set use_vichydro       by the compset you use and the CLM_BLDNML_OPTS -vichydro           setting
+! Set use_cn             by the compset you use and CLM_BLDNML_OPTS -bgc  setting
+! Set use_crop           by the compset you use and CLM_BLDNML_OPTS -crop setting
+! Set spinup_state       by the CLM_BLDNML_OPTS -bgc_spinup      setting
+! Set co2_ppmv           with CCSM_CO2_PPMV                      option
+! Set dtime              with L_NCPL                             option
+! Set fatmlndfrc         with LND_DOMAIN_PATH/LND_DOMAIN_FILE    options
+! Set finidat            with RUN_REFCASE/RUN_REFDATE/RUN_REFTOD options for hybrid or branch cases
+!                        (includes $inst_string for multi-ensemble cases)
+!                        or with CLM_FORCE_COLDSTART to do a cold start
+!                        or set it with an explicit filename here.
+! Set maxpatch_glcmec    with GLC_NEC                            option
+! Set glc_do_dynglacier  with GLC_TWO_WAY_COUPLING               env variable
+!----------------------------------------------------------------------------------
+
+! parameter file
+paramfile = '/glade/work/afoster/TRENDY/trendyclm/parameter_files/ctsm5.3.041.Nfix_params.v13.c250221_upplim250.nc'
+
+! surface dataset - 1700 for S0
+fsurdat='/glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/surfdata_esmf/ctsm5.4.0/surfdata_0.9x1.25_hist_1700_78pfts_c250715.nc'
+flanduse_timeseries = ' '
+
+use_init_interp = .true.
+finidat = '/glade/derecho/scratch/afoster/TRENDY2025/archive/TRENDY2025_postSASU_20250730-091110/rest/0161-01-01-00000/TRENDY2025_postSASU_20250730-091110.clm2.r.0161-01-01-00000.nc'
+
+snow_thermal_cond_glc_method = 'Jordan1991'
+snow_thermal_cond_lake_method = 'Sturm1997'
+
+! don't use fertilizer
+use_fertilizer = .false.
+
+! don't irrigate
+irrigate = .false.
+
+! turn off shifting cultivation
+do_grossunrep = .false.
+
+! urban
+model_year_align_urbantv = 1850
+stream_year_first_urbantv = 1850
+stream_year_last_urbantv = 1850
+
+hist_mfilt = 1,1,1 
+hist_nhtfrq = 0,0,-24 
+
+! monthly global gridded
+hist_fincl1 =  'AR', 'COL_FIRE_CLOSS', 'CROPPROD1C_LOSS', 'CWD_C', 'CWD_C_TO_LIT_CEL_C', 
+              'CWD_C_TO_LIT_LIG_C', 'DEADCROOTC', 'DEADCROOTC_STORAGE', 'DEADCROOTC_XFER',
+              'DEADCROOTN_STORAGE', 'DEADCROOTN_XFER', 'DEADSTEMN_STORAGE', 'DEADSTEMN_XFER', 
+              'LIVECROOTN_STORAGE', 'LIVECROOTN_XFER', 'LIVESTEMN_STORAGE', 'LIVESTEMN_XFER',
+              'DEADCROOTN', 'DEADSTEMN', 'DENIT', 'DWT_CONV_CFLUX', 'F_N2O_DENIT', 
+              'F_N2O_NIT', 'FAREA_BURNED', 'FFIX_TO_SMINN', 'FROOTC', 'FROOTC_STORAGE', 
+              'FROOTC_TO_LITTER', 'FROOTC_XFER', 'FROOTN', 'FSDS', 'GPP', 'HR', 'H2OSNO',
+              'FSR', 'FGEV', 'FCTR', 'FSRNI', 'FSRVI', 'FSDSNI', 'FSDSVI', 'FSH', 
+              'FLDS', 'FIRE', 
+              'LEAFC', 'LEAFC_STORAGE', 'LEAFC_TO_LITTER', 'LEAFC_XFER', 'LEAFN', 
+              'LEAFN_STORAGE', 'LEAFN_XFER', 'LIT_CEL_C_TO_SOM_ACT_C', 
+              'LIT_LIG_C_TO_SOM_SLO_C', 'LIT_MET_C_TO_SOM_ACT_C', 'LITFALL', 'LITFIRE', 
+              'LIVECROOTC', 'LIVECROOTC_STORAGE', 'LIVECROOTC_XFER', 'LIVECROOTN', 
+              'LIVESTEMN', 'M_DEADROOTC_STORAGE_TO_FIRE', 'M_DEADROOTC_TO_FIRE', 
+              'M_DEADROOTC_XFER_TO_FIRE', 'M_DEADSTEMC_STORAGE_TO_FIRE', 
+              'M_DEADSTEMC_TO_FIRE', 'M_DEADSTEMC_XFER_TO_FIRE', 
+              'M_FROOTC_STORAGE_TO_FIRE', 'M_FROOTC_TO_FIRE', 'M_FROOTC_XFER_TO_FIRE', 
+              'M_GRESP_STORAGE_TO_FIRE', 'M_GRESP_XFER_TO_FIRE', 'M_LEAFC_STORAGE_TO_FIRE', 
+              'M_LEAFC_TO_FIRE', 'M_LEAFC_XFER_TO_FIRE', 'M_LIVEROOTC_STORAGE_TO_FIRE', 
+              'M_LIVEROOTC_TO_FIRE', 'M_LIVEROOTC_XFER_TO_FIRE', 
+              'M_LIVESTEMC_STORAGE_TO_FIRE', 'M_LIVESTEMC_TO_FIRE', 
+              'M_LIVESTEMC_XFER_TO_FIRE', 'NBP', 'NDEP_TO_SMINN', 'NET_NMIN', 'NFIX', 
+              'NPP', 'QRUNOFF', 'QSOIL', 'QVEGE', 'QVEGT', 'RAIN', 'RR', 'QIRRIG_DRIP',
+              'SMIN_NO3_LEACHED', 'SMIN_NO3_RUNOFF', 'SMINN', 'SMINN_TO_PLANT', 'SNOW', 
+              'SOILICE', 'SOILLIQ', 'SOM_ACT_C', 'SOM_ACT_C_1m', 'SOM_ACT_C_TO_SOM_PAS_C', 
+              'SOM_ACT_C_TO_SOM_SLO_C', 'SOM_PAS_C', 'SOM_PAS_C_1m', 
+              'SOM_PAS_C_TO_SOM_ACT_C', 'SOM_SLO_C', 'SOM_SLO_C_1m', 
+              'SOM_SLO_C_TO_SOM_ACT_C', 'SOM_SLO_C_TO_SOM_PAS_C', 'SOMC_FIRE', 'SOMFIRE', 
+              'TLAI', 'TOT_WOODPRODC', 'TOT_WOODPRODC_LOSS', 'TOT_WOODPRODN', 'TOTLITC', 
+              'TOTLITN', 'TOTSOILICE', 'TOTSOILLIQ', 'TOTSOMC', 'TOTSOMN', 'TOTVEGC', 
+              'TOTVEGN', 'TSA', 'TSOI', 'WOODC',
+              'FROOTN_STORAGE', 'FROOTN_XFER', "FSRND", "FSRVD", "FSDSND", "FSDSVD"
+              
+! monthly pft 
+hist_fincl2 = 'AGNPP', 'FCEV', 'FCTR', 'FGEV', 'FIRE', 'FLDS', 'FROOTC_ALLOC', 'FSDS', 'FSDSND', 
+              'FSDSNI', 'FSDSVD', 'FSDSVI', 'FSH', 'FSR', 'FSRND', 'FSRNI', 'FSRVD', 
+              'FSRVI', 'GPP', 'HR', 'HTOP', 'LEAFC_ALLOC', 'NPP', 'QIRRIG_DRIP', 'TLAI', 
+              'TOTVEGC', 'TV', 'WOODC_ALLOC', 'GRAINC_TO_FOOD', 'QVEGE', 'QVEGT', 'QSOIL',
+              'Rnet'
+
+! daily global gridded
+hist_fincl3 = 'TLAI'
+            
+hist_dov2xy = .true., .false., .true.
+
+! NDEP - cycle year 1850 for S1 initially
+stream_fldfilename_ndep = '/glade/campaign/cgd/tss/projects/TRENDY2025/inputs/ndep/TRENDY2025_Ndep_Monthly_c250625_lat1e36.nc'
+stream_meshfile_ndep = '/glade/campaign/cgd/tss/projects/TRENDY2025/inputs/ndep/TRENDY2025_Ndep_mesh_c250723.nc'
+model_year_align_ndep = 1850
+stream_year_first_ndep = 1850
+stream_year_last_ndep = 1850
+ndep_taxmode = 'cycle'
+ndep_varlist = 'NDEP_month'
+
+! population density - cycle year 1850 for S1 initially
+model_year_align_popdens = 1850
+stream_year_first_popdens = 1850
+stream_year_last_popdens = 1850

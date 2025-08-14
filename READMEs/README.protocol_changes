@@ -1,0 +1,9 @@
+We used CLM's N fertilization driver data instead of that supplied by TRENDY because we 
+felt it did not mesh well with our crop distributions
+
+We also used CLM's population data, which drives fire ignitions.
+
+Finally, though we were asked to only supply one file per variable, the PFT-specific 
+outputs would have been very huge if all the PFTs were on one file, so we supplied them as
+one file and one PFT per file. They can be easily combined and merged using a library
+like xarray.
